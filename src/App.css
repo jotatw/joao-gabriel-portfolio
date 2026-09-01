@@ -70,6 +70,13 @@ h2 {
 
 article {
   margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+article:hover {
+  background: var(--surface);
 }
 
 .project-link {
@@ -183,3 +190,4 @@ a:focus-visible {
   background: var(--accent);
   color: var(--bg);
 }
+
