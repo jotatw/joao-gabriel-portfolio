@@ -1,6 +1,7 @@
 import { projects } from './data/projects'
-import './App.css'
+import Footer from './components/Footer'
 import Header from './components/Header'
+import './App.css'
 
 function App() {
   return (
@@ -27,7 +28,11 @@ function App() {
               {String(index + 1).padStart(2, '0')}
             </span>
             <div>
-              <h2>{project.name}</h2>
+              <h2>
+                <a href={project.url} target="_blank" rel="noreferrer" className="project-link">
+                  {project.name} <span className="arrow">↗</span>
+                </a>
+              </h2>
               <p className="project-description">{project.description}</p>
               <div className="project-tags">
                 {project.tags.map((tag) => (
@@ -47,6 +52,7 @@ function App() {
           ))}
         </div>
       </section>
+      <Footer />
     </main>
   )
 }

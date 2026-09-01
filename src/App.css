@@ -71,6 +71,30 @@ article {
   margin-top: 1.5rem;
 }
 
+.project-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+.arrow {
+  font-size: 0.8em;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.project-link:hover .arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
 /* --- Header --- */
 header {
   display: flex;
@@ -117,5 +141,32 @@ header {
 
 .exploring-item:hover {
   border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --- Footer --- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+footer a {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+footer a:hover {
   color: var(--accent);
 }
