@@ -191,3 +191,18 @@ a:focus-visible {
   color: var(--bg);
 }
 
+/* --- Cursor animado (terminal prompt) --- */
+.cursor {
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}
