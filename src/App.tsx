@@ -1,9 +1,11 @@
 import { projects } from './data/projects'
 import './App.css'
+import Header from './components/Header'
 
 function App() {
   return (
     <main>
+      <Header />
       <section>
         <span className="section-number">01 / ABOUT</span>
         <h1>
@@ -35,6 +37,15 @@ function App() {
             </div>
           </article>
         ))}
+      </section>
+
+            <section>
+        <span className="section-number">03 / CURRENTLY EXPLORING</span>
+        <div className="exploring-list">
+          {['Infrastructure', 'Local AI', 'Automation', 'Documentation', 'Self-hosting'].map((item) => (
+            <span key={item} className="exploring-item">{item}</span>
+          ))}
+        </div>
       </section>
     </main>
   )
