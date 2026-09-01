@@ -1,9 +1,19 @@
+import { useEffect, useState } from 'react'
 import { projects } from './data/projects'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import './App.css'
 
 function App() {
+    const [showButton, setShowButton] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   return (
     <main>
       <Header />
@@ -45,7 +55,7 @@ function App() {
         ))}
       </section>
 
-            <section>
+        <section>
         <span className="section-number">03 / CURRENTLY EXPLORING</span>
         <div className="exploring-list">
           {['Infrastructure', 'Local AI', 'Automation', 'Documentation', 'Self-hosting'].map((item) => (
@@ -54,6 +64,16 @@ function App() {
         </div>
       </section>
       <Footer />
+            {showButton && (
+        <button
+          type="button"
+          className="back-to-top"
+          aria-label="Back to top"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          ↑
+        </button>
+      )}
     </main>
   )
 }

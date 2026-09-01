@@ -240,3 +240,25 @@ section:first-of-type .tagline {
     animation: none;
   }
 }
+
+/* --- Back to top --- */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.back-to-top:hover {
+  background: var(--surface-light);
+  border-color: var(--accent);
+  color: var(--accent);
+}
