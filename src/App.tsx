@@ -14,8 +14,8 @@ function App() {
           <br />
           through practical projects.
         </h1>
-        <p className="tagline">
-          Linux · Infrastructure · Automation · Local AI
+                <p className="tagline">
+          Linux · Infrastructure · Automation · Local AI · Self-hosting
         </p>
       </section>
 
